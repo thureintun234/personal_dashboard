@@ -1,0 +1,38 @@
+<div class="add-bookmark-wrapper container has-blurred-white-bg">
+  <h2 class="is-bold">Add BookMark</h2>
+
+  <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
+    <div class="form-field">
+      <label for="" class="form-label">Name</label>
+      <input
+        type="text"
+        ngModel
+        #titleField="ngModel"
+        name="name"
+        class="textbox"
+        placeholder="e.g. Wikipedia"
+        minlength="3"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="" class="form-label">URL</label>
+      <input
+        type="url"
+        ngModel
+        #titleField="ngModel"
+        name="url"
+        class="textbox"
+        placeholder="e.g. www.wikipedia.com"
+        minlength="3"
+        required
+      />
+    </div>
+
+    <div class="btns-container">
+      <a routerLink="../" class="btn">Cancel</a>
+      <button type="submit" class="btn align-end">Create BookMark</button>
+    </div>
+  </form>
+</div>

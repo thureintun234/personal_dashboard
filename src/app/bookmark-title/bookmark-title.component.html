@@ -1,0 +1,16 @@
+<div class="bookmarks-title">
+  <div class="title-icon" *ngIf="!faviconError">
+    <img
+      [src]="bookmark.url"
+      alt="Google"
+      width="30"
+      height="30"
+      (error)="faviconError = true"
+    />
+  </div>
+
+  <div class="title-icon fallback" *ngIf="faviconError">
+    {{ bookmark.name.toUpperCase()[0] }}
+  </div>
+  <p class="title-text">{{ bookmark.name }}</p>
+</div>
